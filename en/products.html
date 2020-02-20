@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3D - Products</title>
+    <link rel="icon" href="../images/siteicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <!-- BACK TO TOP ARROW -->
+    <img onclick="topFunction()" id="topBtn" src="../images/icon_arrowtop.svg" alt="gototop">
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="modalwindow" class="modalwindow">
+
+        <div id="modalclose" class="modalclose"></div>
+
+        <div class="close" onclick="closeModal();">&times;</div>
+
+        <div class="certificatemodal">
+            <img id="certificateimg" src="../images/certificate-en.png" alt="certificate" onclick="zoomIn();">
+        </div>
+
+    </div>
+
+    <!-- IMAGE MODAL -->
+    <div id="imagewindow" class="imagewindow">
+
+        <div id="imageclose" class="imageclose"></div>
+
+        <div class="close" onclick="closeImage();">&times;</div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusImages(-1)">&#10094;</a>
+        <a class="next" onclick="plusImages(1)">&#10095;</a>
+
+        <div class="imagearea">
+            
+                <!-- Slideshow container -->
+                <div class="image-container">
+    
+                    <!-- Full-width images with number and caption text -->
+                    <div class="myImages">
+                        <img id="productimg1" src="../images/products/asc-03k/ASC-03K_image-1.png" style="width:100%">
+                        <div id="imagetext1" class="imagetext">ASC-03K</div>
+                    </div>
+                
+                    <div class="myImages">
+                        <img id="productimg2" src="../images/products/asc-03k/ASC-03K_image-2.jpg" style="width:100%">
+                        <div id="imagetext2" class="imagetext">ASC-03K</div>
+                    </div>
+                
+                    <div class="myImages">
+                        <img id="productimg3" src="../images/products/asc-03k/ASC-03K_image-3.jpg" style="width:100%">
+                        <div id="imagetext3" class="imagetext">ASC-03K</div>
+                    </div>
+    
+                    <div class="myImages">
+                        <img id="productimg4" src="../images/products/asc-03k/ASC-03K_image-4.jpg" style="width:100%">
+                        <div id="imagetext4" class="imagetext">ASC-03K</div>
+                    </div>
+                
+                    <div class="myImages">
+                        <img id="productimg5" src="../images/products/asc-03k/ASC-03K_image-5.jpg" style="width:100%">
+                        <div id="imagetext5" class="imagetext">ASC-03K</div>
+                    </div>
+                    
+                    <div id="sixthimage" class="myImages">
+                        <img id="productimg6" src="../images/products/asc-03k/ASC-03K_image-6.jpg" style="width:100%">
+                        <div id="imagetext6" class="imagetext">ASC-03K</div>
+                    </div>
+
+                </div>
+
+                <!-- The dots/circles -->
+                <div id="dots">
+                    <span class="imagedot" onclick="currentImage(1)"></span>
+                    <span class="imagedot" onclick="currentImage(2)"></span>
+                    <span class="imagedot" onclick="currentImage(3)"></span>
+                    <span class="imagedot" onclick="currentImage(4)"></span>
+                    <span class="imagedot" onclick="currentImage(5)"></span>
+                    <span id="sixthdot" class="imagedot" onclick="currentImage(6)"></span>
+                </div> 
+    
+        </div>
+
+    </div>
+
+    <!-- INFO MODAL -->
+    <div id="infowindow" class="infowindow">
+
+        <div id="infoclose" class="infoclose"></div>
+
+        <div class="close" onclick="closeInfo();">&times;</div>
+
+        <div id="infoarea1" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">ASC-03K</h4>
+            <hr>
+            <p>
+                is an Automatic machine for simultaneously cleaning the outside and inside stator surfaces from paint, 
+                rust, dirt and impregnation varnish. Once the work piece has been loaded manually, the machine performs 
+                a fully automaticoperating cycle. After cleaning has been completed, the stator is returned to its initial 
+                position for manual unloading.Cleaning of the outside surface is carried out by two steel wirebrushes, while a 
+                sanding process is adopted for the inside surface.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Outside stator diameter range - 90 to 175 mm</p>
+            <p>Inside stator diameter range - 70 to 130 mm</p>
+            <p>Maximum stator stack width - 44 mm</p>
+            <p>Approximate Cycle time - 10 to 15 s</p>
+            <p>Production capacity - up to 240 pcs/h</p>
+            <p>Readjustment time - 60sec</p>
+            <p>Air pressure supply - 6 bar</p>
+            <p>Power supply - Upon request </p>
+            <p>Wire brush drive motors power - 2 x 2.2 kW</p>
+            <p>Sanding band drive motor power - 0.75 Kw</p>
+            <p>Work piece drive motor power - 0.25 kW</p>
+            <p>Sanding band diameter/width - 76.2(3”)/38.1(1.5”) mm</p>
+            <p>Overall dimensions L x W x H - 1000 x 655 x 1590 mm</p>
+            <p>Weight - 520 kg</p>
+        </div>
+
+        <div id="infoarea2" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">AYC-01M</h4>
+            <hr>
+            <p>
+                is an Automatic Yoke (Field Case) Machine for cleaning the outside surfaces of field cases (yokes), 
+                solenoids and stators from paint, rust and impregnation varnish. Once the work piece has been loaded manually, 
+                the machine performs a fully automatic operating cycle. The surface of the slowly rotating work piece is cleaned 
+                by means of a package of standard steel wire brushes which rotates in the opposite direction. Specially designed 
+                adaptor cups protect the lead and both openings of the field case during the cleaning process, thus completely 
+                eliminating the penetration of waste-chips, rust and old paint
+            </p>
+            <h4>Technical Data</h4>
+            <p>Work piece outside diameter range - 45…130 mm</p>
+            <p>Maximum length of work piece - 12...153 mm</p>
+            <p>Stroke of brush spindle slide - 100 mm</p>
+            <p>Stroke of lifting mechanism - 245 mm</p>
+            <p>Power of the electric motor for brushes rotation - 5.5 kW</p>
+            <p>Power of the electric motor for work piece rotation - 0.18 kW</p>
+            <p>Power supply - 3 x 415V, 50Hz </p>
+            <p>Air Pressure Supply - 6 bar </p>
+            <p>Maximum Air consumption - 60 NL/min</p>
+            <p>Adjustable cycle time - 5 … 60 sec</p>
+            <p>Production capacity - up to 180 pcs/h</p>
+            <p>Overall dimensions - L:970, W:790, H:1475 mm</p>
+            <p>Weight of the machine - 560 kg</p>
+        </div>
+
+        <div id="infoarea3" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">UCM-05S</h4>
+            <hr>
+            <p>
+                is an Automatic High-Precision Undercutting Machine realizing undercutting of the commutatotor’s mica insulation. 
+                The machine is suitable for the majority of armature commutators.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Commutator Diameter - 26-80 mm</p>
+            <p>Number of Commutator Bars - 10-64</p>
+            <p>Armature Shaft Length - 110-500 mm</p>
+            <p>Armature Shaft End Diameter - 10-22 mm</p>
+            <p>Maximum Commutator Length - 80 mm</p>
+            <p>Maximum Spindle Rotation Speed - 7 000 rpm</p>
+            <p>2 feeding ranges - (0.05-0.25) and (0.5-5.0) m/min</p>
+            <p>Positioning accuracy - 0.005 mm</p>
+            <p>Depth of undercutting - 0.2 -1 mm</p>
+            <p>Channel depth - 0,2-1 mm</p>
+            <p>Maximum armatures types - 99 pcs</p>
+            <p>Productivity ( depends on # of bars,length of bars) - up to 120 pcs/h</p>
+            <p>Electrical Power Supply - 3x380 VAC, 50Hz, 1.5 kW </p>
+            <p>Air Pressure Supply - 6 bar</p>
+            <p>Air Consumption - 25 Nl/min</p>
+        </div>
+
+        <div id="infoarea4" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">CTM-02D</h4>
+            <hr>
+            <p>
+                is our latest model Hydraulic Armature Coil Twisting Machine, designed for twisting of heavy-duty armatures. 
+                CTM-02D implements a new technology for twisting of the armature’s lead wires. The advanced twisting process 
+                makes the machine fully suitable for applications requiring high quality and reliability such as armatures of 
+                starters and starter-generators for the Automotive OEM and Aircraft Industries. The twisting process can be 
+                modeledand it consists of up to three stages.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Outside body diameter - 90-115 mm</p>
+            <p>Commutator side shaft length - 130-160 mm</p>
+            <p>Maximum twisting angle per spindle - 60 degree</p>
+            <p>Nominal twisting torque per spindle - 1600 Nm</p>
+            <p>Armature clamping force - 6000 N</p>
+            <p>Hydraulic pump motor power - 1,5 kW</p>
+            <p>Productivity - up to 240 pcs/h</p>
+            <p>Air Pressure supply - 4,5-6 bar</p>
+            <p>Power Supply - 3 x 400VAC,50/60Hz</p>
+            <p>Overall dimensions - L:920 x W:890 x H:1210 mm</p>
+            <p>Weight - 530 kg</p>
+        </div>
+
+        <div id="infoarea5" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">HCM-02</h4>
+            <hr>
+            <p>
+                is an Automatic Universal Hairpin Coil Forming Machine designed for the production of a wide range knuckle type 
+                conductors from single rectangular enameled wire. The machine meets all requirements of various Automotive and 
+                Aircraft Industries applications such as conductors for starters, alternators and starter-generators.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Wire cross-section - 3.0-6.0 x 1.1-3.5 mm</p>
+            <p>Total developed wire length - 130 - 160 mm</p>
+            <p>Maximum width of the hairpin - 80 mm</p>
+            <p>Maximum CW twisting angle - 100 degree</p>
+            <p>Maximum CCW twisting angle - 60 degree</p>
+            <p>Maximum displacement of the legs - 20 mm</p>
+            <p>Maximum length of the stripping zone - 165 mm</p>
+            <p>Productivity - up to 1200 pcs/h</p>
+            <p>Air Pressure supply - 5.5-6.5 bar</p>
+            <p>Maximum Air Consumption - 750 Nl/min</p>
+            <p>Power Supply (other voltages available) - 3 x 400VAC, 50/60Hz</p>
+            <p>Overall dimensions - L:4750, W:1020, H:1745 mm</p>
+            <p>Total length with reel - L:6200 mm</p>
+        </div>
+
+        <div id="infoarea6" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">APMV-02D</h4>
+            <hr>
+            <p>
+                02D is a completely Automated Bench Type Polishing Machine, for simultaneous polishing of all armature 
+                (or rotor) surfaces. The machine can polish all popular armatures and rotors.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Maximum body diameter - 130 mm</p>
+            <p>Minimum body diameter - 50 mm</p>
+            <p>Maximum shaft length - 380 mm</p>
+            <p>Minimum shaft length - 80 mm</p>
+            <p>Air pressure supply - 4.5-6 bar</p>
+            <p>Power supply - 3x220V / 60Hz</p>
+        </div>
+
+        <div id="infoarea7" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">CFI-04S</h4>
+            <hr>
+            <p>
+                The Automatic Clips Forming and Inserting Machine is a fully automated bench type machine designed for forming 
+                and inserting clips in the armatures hairpins leads. The clips insertion prepares armatures with riser-less 
+                commutators for the subsequent operation, that is welding with an automatic Commutator Spot Welding Machine.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Commutator diameter - 28 to 60 mm</p>
+            <p>Number of commutator bars - 10 to 99</p>
+            <p>Armature’s shaft length - 180 to 500 mm</p>
+            <p>Minimum shaft length - 80 mm</p>
+            <p>Electrical power (Other voltages available on request) - 220VAC / 60Hz </p>
+            <p>Air pressure supply - 6 bar</p>
+            <p>Productivity depends on the # of bars - up to 150 pcs/h</p>
+        </div>
+
+        <div id="infoarea8" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">CTL-311S</h4>
+            <hr>
+            <p>
+                311S is our latest model lathe, designed for finish turning of the armature’s commutator or the rotor’s slip ring. 
+                The Lathe features a full range of multifunctional capabilities, sophisticated turning technology based on using 
+                servo drive systems and a high qualitylevel of all output parameters
+            </p>
+            <h4>Technical Data</h4>
+            <p>Body diameter - 45-130 mm</p>
+            <p>Shaft length - 100-350 mm</p>
+            <p>Commutator / slip ring diameter - 10–60 mm </p>
+            <p>Feeding speed - 0.05–0.40 m/min</p>
+            <p>Positioning accuracy - 2 µm</p>
+            <p>Run-Out (for Commutators) - less than 0.008 mm / .0003” </p>
+            <p>Run-Out (for Slip Rings) - less than 0.012 mm / .0005” </p>
+            <p>Surface roughness - less than 6 Rz</p>
+            <p>Readjusting time - 2.5 – 3 min</p>
+            <p>Productivity - up to 120 pcs/h</p>
+            <p>Air Pressure supply - 4.5 – 6 bar</p>
+            <p>Power Supply - 3 kW / 3 phases </p>
+            <p>Overall dimensions - L:1240, W:940, H:1200 mm</p>
+            <p>Weight - 510 kg</p>
+        </div>
+
+        <div id="infoarea9" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">SF-04S</h4>
+            <hr>
+            <p>
+                is an Automatic Slot-Insulation Forming Machine designed for forming and insertion of paper insulation in the slots 
+                of the armature’s body. This model is sophisticated enough to realize high quality insulation process for all types 
+                of gear-reduction armatures available on the market today. The integrated pairs of profiled rollers (two or three pairs, 
+                depending of the insulation shape) and the two heater stations (optional) give the SF-04S the capability to produce any 
+                shape of insulation, such as -B-shape or S-shape slot insulation.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Maximum shaft length - 315 mm</p>
+            <p>Minimum shaft length - 105 mm</p>
+            <p>Maximum commside shaft length - 100 mm </p>
+            <p>Minimum commside shaft length - 50 mm</p>
+            <p>Maximum armature body diameter - 100 mm</p>
+            <p>Minimum armature body diameter - 55 mm</p>
+            <p>Productivity - up to 120 pcs/h</p>
+            <p>Air Pressure supply - 5.5-6.5 bar</p>
+            <p>Maximum Air Consumption - 10 Nl/min</p>
+            <p>Power Supply (other voltages available) - 3 x 230VAC / 60Hz</p>
+            <p>Overall dimensions - L:2160, W:600, H:1500 mm</p>
+        </div>
+
+        <div id="infoarea10" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">SWM-500RS</h4>
+            <hr>
+            <p>
+                is a fully automated machine, designed for electric resistance welding of armature’s lead wires to the commutator. 
+                It is suitable for any type of commutator, regardless of the size of the armature or the numberof bars.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Commutator diameter - 28-70 mm</p>
+            <p>Number of commutator bars - 15-58 </p>
+            <p>Shaft length - 180-500 mm</p>
+            <p>Power supply - 2ph-380/480V-50/60Hz </p>
+            <p>Maximum power of welding transformer - 36 kVA</p>
+            <p>Air pressure supply - 5.5-7.5 bar</p>
+            <p>Maximum air consumption - 80 NL/min</p>
+            <p>Cooling water - 150 L</p>
+            <p>Overall dimensions - L:1250, W:800, H:1800 mm</p>
+            <p>Weight - 350 kg</p>
+            <p>Cycle time per slot - 1.5-3.5 s</p>
+        </div>
+
+        <div id="infoarea11" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">NP-02D</h4>
+            <hr>
+            <p>
+                automatic hydraulic machine nekvane ends of the wires of the rotors. 
+                The machine has an automatic work cycle with manual loading / downloading rotor.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Diameter / stroke of the upper hydraulic cylinder - Ø50 / 150 mm</p>
+            <p>Diameter / stroke of the lower hydraulic cylinder - Ø80 / 25 mm</p>
+            <p>Cycle time - 20 sec</p>
+            <p>Hydraulic pressure supply - 60-80 bar</p>
+            <p>Power supply - 3x230V / 60Hz</p>
+            <p>Overall dimensions - L:750, W:700, H:1720 mm</p>
+            <p>Weight - 350 kg</p>
+        </div>
+
+        <div id="infoarea12" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">CCM-05D</h4>
+            <hr>
+            <p>
+                a semi-automatic machine for cutting the ends of the pins mounted in the rotor, then twisting them. Putting the rotor 
+                and its removal are performed manually by an operator, while working cycle is performed automatically.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Maximum diameter that are located cut wires - 85 mm</p>
+            <p>Maximum torque - 12 000 N.m</p>
+            <p>Motor Power of turbines - 1500 W</p>
+            <p>Overall dimensions - L:625, W:900, H:1335 mm</p>
+            <p>Weight - 420 kg</p>
+        </div>
+
+        <div id="infoarea13" class="infoarea" autocomplete="off">
+            <h4 class="infotitle">ARTC-01</h4>
+            <hr>
+            <p>
+                automatic tabletop machine for cleaning of the threads and the end face of the ends of the rotors.
+            </p>
+            <h4>Technical Data</h4>
+            <p>Thread length range - 10-15 mm</p>
+            <p>Maximum body diameter - 130 mm</p>
+            <p>Minimum body diameter - 80 mm</p>
+            <p>Minimum shaft length - 170 mm</p>
+            <p>Air pressure supply - 4.5-6 bar</p>
+            <p>Power supply - 3x230V / 60Hz</p>
+            <p>Overall dimensions - L:1106, W:1070, H:893 mm</p>
+            <p>Weight - 220 kg</p>
+        </div>
+
+    </div>
+
+    <!-- VIDEO MODAL -->
+    <div id="videowindow" class="videowindow">
+
+        <div id="videoclose" class="videoclose"></div>
+
+        <div class="close" onclick="closeVideo();">&times;</div>
+
+        <div class="videoarea">
+            <iframe id="currentvideo" src="https://www.youtube.com/embed/4Xnm5xUnNFo"
+                allowfullscreen="allowfullscreen"
+                mozallowfullscreen="mozallowfullscreen" 
+                msallowfullscreen="msallowfullscreen" 
+                oallowfullscreen="oallowfullscreen" 
+                webkitallowfullscreen="webkitallowfullscreen">
+            </iframe>
+        </div>
+
+    </div>
+
+    <!-- SITE -->
+    <div class="container">
+
+        <header>
+
+            <a href="index.html" class="logo"><img src="../images/logo.svg" alt="logo"></a>
+            <h1 class="title">MACHINES IN THREE DIMENSIONS Ltd.</h1>
+            <nav>
+                <img id="hamburgericon" onclick="navBar()" src="../images/icon_hamburger.svg" alt="hamburger">
+                <div id="navMenu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a class="activepage" href="products.html">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="language">
+                <a class="flaginactive" href="../bg/products.html"><img src="../images/flagbg.svg" alt="flag-bg"></a>
+                <a href="products.html"><img src="../images/flagen.svg" alt="flag-en"></a>
+            </div>
+
+        </header>
+
+        <main>
+
+            <h2>Products</h2>
+            <hr>
+            <p>
+                We are offering a wide range of machines, as well as a variety of technologies and, the production capacity to meet our 
+                customers' specific performance and quality targets, while providing timely delivery of our custom designed equipment.
+            </p>
+
+            <div class="productscontainer">
+
+                <div class="productscard">
+                    <h4>ASC-03K</h4>
+                    <img onclick="imageWindow(1);" src="../images/products/thumbnails/ASC-03K.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(1);">Information</button>
+                        <button onclick="videoWindow(1);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>AYC-01M</h4>
+                    <img onclick="imageWindow(2);" src="../images/products/thumbnails/AYC-01M.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(2);">Information</button>
+                        <button onclick="videoWindow(2);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>UCM-05S</h4>
+                    <img onclick="imageWindow(3);" src="../images/products/thumbnails/UCM-05S.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(3);">Information</button>
+                        <button onclick="videoWindow(3);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>CTM-02D</h4>
+                    <img onclick="imageWindow(4);" src="../images/products/thumbnails/CTM-02D.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(4);">Information</button>
+                        <button onclick="videoWindow(4);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>HCM-02</h4>
+                    <img onclick="imageWindow(5);" src="../images/products/thumbnails/HCM-02.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(5);">Information</button>
+                        <button onclick="videoWindow(5);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>APMV-02D</h4>
+                    <img onclick="imageWindow(6);" src="../images/products/thumbnails/APMV-02D.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(6);">Information</button>
+                        <button onclick="videoWindow(6);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>CFI-04S</h4>
+                    <img onclick="imageWindow(7);" src="../images/products/thumbnails/CFI-04S.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(7);">Information</button>
+                        <button onclick="videoWindow(7);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>CTL-311S</h4>
+                    <img onclick="imageWindow(8);" src="../images/products/thumbnails/CTL-311S.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(8);">Information</button>
+                        <button onclick="videoWindow(8);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>SF-04S</h4>
+                    <img onclick="imageWindow(9);" src="../images/products/thumbnails/SF-04S.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(9);">Information</button>
+                        <button onclick="videoWindow(9);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>SWM-500RS</h4>
+                    <img onclick="imageWindow(10);" src="../images/products/thumbnails/SWM-500RS.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(10);">Information</button>
+                        <button onclick="videoWindow(10);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>NP-02D</h4>
+                    <img onclick="imageWindow(11);" src="../images/products/thumbnails/NP-02D.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(11);">Information</button>
+                        <button onclick="videoWindow(11);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>CCM-05D</h4>
+                    <img onclick="imageWindow(12);" src="../images/products/thumbnails/CCM-05D.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(12);">Information</button>
+                        <button onclick="videoWindow(12);">Video</button>
+                    </div>
+                </div>
+
+                <div class="productscard">
+                    <h4>ARTC-01</h4>
+                    <img onclick="imageWindow(13);" src="../images/products/thumbnails/ARTC-01.png" alt="services_example">
+                    <div class="buttons">
+                        <button onclick="infoWindow(13);">Information</button>
+                        <button onclick="videoWindow(13);">Video</button>
+                    </div>
+                </div>
+
+            </div>
+                
+        </main>
+
+        <footer>
+
+            <div class="footercontainer">
+                <div class="navfooter">
+                    <h3>Navigation</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacts">
+                    <h3>Contacts</h3>
+                    <hr>
+                    <p class="firstp">MACHINES IN THREE DIMENSIONS Ltd.</p>
+                    <p>Address: Sofia, "Shipchenski Prohod" Blvd 69</p>
+                    <p>Phone: +359 (2)8700142</p>
+                    <p>GSM: +359 884 093 533</p>
+                    <p>E-mail: <a href="mailto:office@m3d.bg">office@m3d.bg</a></p>
+                </div>
+
+                <div class="partners">
+                    <h3>Main partners</h3>
+                    <hr>
+                    <p class="firstp">M&T 2001 Ltd.</p>
+                    <p>Address: 270 Pennsylvania Ave.</p>
+                    <p>Phone: 905.761.7770</p>
+                    <p>Site: <a href="http://www.mt2001.com" target="_blank">http://www.mt2001.com</a></p>
+                    <p>E-mail: <a href="mailto:infobox@mt2001.com">infobox@mt2001.com</a></p>
+                </div>
+
+                <div class="certificate">
+                    <img src="../images/certificate-en.png" alt="certificate" onclick="openModal();">
+                </div>
+            </div>
+
+            <div class="copyright">
+                <hr>
+                © 2020 MACHINES IN THREE DIMENSIONS Ltd.
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../script-products.js"></script>
+
+</body>
+</html>

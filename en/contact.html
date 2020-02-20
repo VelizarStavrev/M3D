@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M3D - Contacts</title>
+    <link rel="icon" href="../images/siteicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    
+    <!-- BACK TO TOP ARROW -->
+    <img onclick="topFunction()" id="topBtn" src="../images/icon_arrowtop.svg" alt="gototop">
+
+    <!-- CERTIFICATE MODAL -->
+    <div id="modalwindow" class="modalwindow">
+
+        <div id="modalclose" class="modalclose"></div>
+
+        <div class="close" onclick="closeModal();">&times;</div>
+
+        <div class="certificatemodal">
+            <img id="certificateimg" src="../images/certificate-en.png" alt="certificate" onclick="zoomIn();">
+        </div>
+
+    </div>
+
+    <!-- SITE -->
+    <div class="container">
+
+        <header>
+
+            <a href="index.html" class="logo"><img src="../images/logo.svg" alt="logo"></a>
+            <h1 class="title">MACHINES IN THREE DIMENSIONS Ltd.</h1>
+            <nav>
+                <img id="hamburgericon" onclick="navBar()" src="../images/icon_hamburger.svg" alt="hamburger">
+                <div id="navMenu">
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a class="activepage" href="contact.html">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <div class="language">
+                <a class="flaginactive" href="../bg/contact.html"><img src="../images/flagbg.svg" alt="flag-bg"></a>
+                <a href="contact.html"><img src="../images/flagen.svg" alt="flag-en"></a>
+            </div>
+
+        </header>
+
+        <main>
+
+            <h2>Contacts</h2>
+            <hr>
+            <p>
+                Should you require more detailed information on any of our products or services, 
+                feel free to contact us via e-mail or call at the telephones provided below.
+            </p>
+
+            <div class="container-contacts">
+
+                <div class="contact-item">
+                    <h3 class="maptitle">Map location</h3>
+                    <div id="map"></div>
+                  </div>
+
+                <div class="contact-item">
+                    <h3 class="formtitle">Contact form</h3>
+                    <form>
+                        <br>
+                        <label for="fname">First Name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last Name:</label><br>
+                        <input type="text" id="lname" name="lname"><br>
+                        <label for="phone">Phone:</label><br>
+                        <input type="text" id="phone" name="phone"><br>
+                        <label for="mail">E-mail:</label><br>
+                        <input type="text" id="mail" name="mail"><br>
+                        <label for="message">Message:</label><br>
+                        <textarea name="message" placeholder="Въведете съобщение"></textarea><br><br>
+                        <button>SEND</button>
+                    </form>
+                </div>
+
+            </div>
+                
+        </main>
+
+        <footer>
+
+            <div class="footercontainer">
+                <div class="navfooter">
+                    <h3>Navigation</h3>
+                    <hr>
+                    <ul>
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about.html">
+                                About us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="products.html">
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="services.html">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="contact.html">
+                                Contacts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contacts">
+                    <h3>Contacts</h3>
+                    <hr>
+                    <p class="firstp">MACHINES IN THREE DIMENSIONS Ltd.</p>
+                    <p>Address: Sofia, "Shipchenski Prohod" Blvd 69</p>
+                    <p>Phone: +359 (2)8700142</p>
+                    <p>GSM: +359 884 093 533</p>
+                    <p>E-mail: <a href="mailto:office@m3d.bg">office@m3d.bg</a></p>
+                </div>
+
+                <div class="partners">
+                    <h3>Main partners</h3>
+                    <hr>
+                    <p class="firstp">M&T 2001 Ltd.</p>
+                    <p>Address: 270 Pennsylvania Ave.</p>
+                    <p>Phone: 905.761.7770</p>
+                    <p>Site: <a href="http://www.mt2001.com" target="_blank">http://www.mt2001.com</a></p>
+                    <p>E-mail: <a href="mailto:infobox@mt2001.com">infobox@mt2001.com</a></p>
+                </div>
+
+                <div class="certificate">
+                    <img src="../images/certificate-en.png" alt="certificate" onclick="openModal();">
+                </div>
+            </div>
+
+            <div class="copyright">
+                <hr>
+                © 2020 MACHINES IN THREE DIMENSIONS Ltd.
+            </div>
+
+        </footer>
+
+    </div>
+
+    <script src="../script.js"></script>
+    
+    <!-- Google Maps -->
+    <script>
+        // Initialize and add the map
+    function initMap() {
+        // The location of M3D
+        var m3d = {lat: 42.677526, lng: 23.369231};
+        // The map, centered at the place
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 17, center: m3d});
+        // The marker, positioned at the address
+        var marker = new google.maps.Marker({position: m3d, map: map});
+    }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOPd9UtATR_8utjkuAISEzh078KRAYPac&callback=initMap" type="text/javascript">
+    </script>
+
+</body>
+</html>
