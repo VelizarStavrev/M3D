@@ -338,7 +338,7 @@ function infoWindow(number) {
 // VIDEO WINDOW
 function closeVideo() {
     document.getElementById("videowindow").style.display = "none";
-    document.getElementById("currentvideo").src = "https://www.youtube.com/embed/4Xnm5xUnNFo";
+    document.getElementById("currentvideo").src = "";
 }
   
 function videoWindow(number) {
@@ -403,7 +403,7 @@ function videoWindow(number) {
         break;
   
       default: 
-        document.getElementById("currentvideo").src = "https://www.youtube.com/embed/4Xnm5xUnNFo";
+        document.getElementById("currentvideo").src = "";
         break;
     }
 }

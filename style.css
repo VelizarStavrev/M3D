@@ -880,6 +880,9 @@ h3 {
     .slideshow-container {
         max-width: 400px;
     }
+    .text {
+        font-size: 1rem;
+    }
 
     /* PRODUCTS */
     /* info modal */
@@ -933,6 +936,11 @@ h3 {
 }
 
 @media screen and (max-width: 450px) {
+    /* TOP BUTTON */
+    #topBtn {
+        height: 35px;
+    }
+
     /* NAV MENU */
     .title {
         font-size: 2rem;
@@ -943,6 +951,9 @@ h3 {
     .slideshow-container {
         max-width: 300px;
     }
+    .text {
+        font-size: 0.8rem;
+    }
 
     /* PRODUCTS */
     /* video modal */
@@ -952,10 +963,11 @@ h3 {
     }
     /* image modal */
     .imagewindow {
-        height: 100%;
+        height: 120%; /* new update */
     }
     .myImages img {
         height: 200px;
+        width: auto; /* new update */
     }
     .prev, .next {
         font-size: 25px;
@@ -992,6 +1004,10 @@ h3 {
     /* Slideshow container */
     .slideshow-container {
         max-width: 270px;
+    }
+    /* Caption text */
+    .text {
+        font-size: 0.5rem;
     }
 
     /* FOOTER */
