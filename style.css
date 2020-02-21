@@ -174,24 +174,28 @@ nav a:hover {
   background-color: white;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.6s ease;
+  /* transition: background-color 0.55s linear; */
 }
 .active, .dot:hover {
   background-color: rgb(50, 50, 50);
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
 }
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
+  -webkit-animation-duration: 2s;
   animation-name: fade;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
 }
 @-webkit-keyframes fade {
-  from {opacity: .4}
+  from {opacity: 0}
   to {opacity: 1}
 }
 @keyframes fade {
-  from {opacity: .4}
+  from {opacity: 0}
   to {opacity: 1}
 }
 
@@ -764,6 +768,13 @@ h3 {
         z-index: 99;
     }
 
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 800px;
+    }
+    
+
     /* FOOTER */
     .footercontainer {
         grid-template-columns: auto auto;
@@ -822,6 +833,12 @@ h3 {
         text-align: center;
     }
 
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 600px;
+    }
+
     /* PRODUCTS */
     .videoarea iframe {
         width: 420px;
@@ -858,6 +875,12 @@ h3 {
 }
 
 @media screen and (max-width: 650px) {
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 400px;
+    }
+
     /* PRODUCTS */
     /* info modal */
     .infowindow {
@@ -915,6 +938,12 @@ h3 {
         font-size: 2rem;
     }
 
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 300px;
+    }
+
     /* PRODUCTS */
     /* video modal */
     .videoarea iframe {
@@ -957,6 +986,12 @@ h3 {
     .dot {
         height: 12.5px;
         width: 12.5px;
+    }
+
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 270px;
     }
 
     /* FOOTER */
