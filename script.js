@@ -32,6 +32,9 @@ function navBar() {
 }
 
 // CERTIFICATE MODAL
+// Variables
+var screenWidth = screen.width;
+
 // Key pressed in the modal
 function keyEvents(event) {
   switch (event.keyCode) {
@@ -40,6 +43,8 @@ function keyEvents(event) {
           closeVideo();
           closeInfo();
           closeImage();
+          break;
+
       case 37:
           plusImages(-1);
           break;
@@ -56,22 +61,34 @@ function openModal() {
   document.getElementById("modalclose").addEventListener("click", closeModal);
   // close on clicking the escape key
   document.addEventListener('keydown', keyEvents); 
+
+  if (screenWidth <= 650) {
+    document.getElementById("certificateimg").style.cursor = "auto";
+  }
 }
 
 function closeModal() {
   document.getElementById("modalwindow").style.display = "none";
+
+  if (screenWidth >= 651) {
   document.getElementById("certificateimg").style.cursor = "zoom-in";
   document.getElementById("certificateimg").style.height = "85vh";
+  }
 }
 
 function zoomIn() {
   var zoom = document.getElementById("certificateimg").style.cursor;
-  if (zoom === "zoom-out") {
-    document.getElementById("certificateimg").style.cursor = "zoom-in";
-    document.getElementById("certificateimg").style.height = "85vh";
-  }
-  else {
-    document.getElementById("certificateimg").style.cursor = "zoom-out";
-    document.getElementById("certificateimg").style.height = "125vh";
+
+  if (screenWidth <= 650) {
+    document.getElementById("certificateimg").style.cursor = "auto";
+  } else {
+    if (zoom === "zoom-out") {
+      document.getElementById("certificateimg").style.cursor = "zoom-in";
+      document.getElementById("certificateimg").style.height = "85vh";
+    }
+    else {
+      document.getElementById("certificateimg").style.cursor = "zoom-out";
+      document.getElementById("certificateimg").style.height = "125vh";
+    }
   }
 }
