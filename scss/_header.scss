@@ -1,0 +1,90 @@
+/* HEADER */
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "logo title ."
+                         "logo nav  language";
+    justify-items: center;
+    align-items: center;
+    background-color: $primary;
+    color: white;
+}
+
+.logo {
+    grid-area: logo;
+
+    img {
+        height: 75px;
+        width:  100%
+    }
+}
+
+.title {
+    grid-area: title;
+    font-size: 2.2rem;
+}
+
+nav {
+    grid-area: nav;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin: 7.5px 0px;
+        height: auto;
+    }
+
+    a {
+        text-decoration: none;
+        text-align: center;
+        padding: 7.5px 30px;
+        background-color: $primary;
+        color: white;
+        font-size: 1.2rem;
+
+        &:hover {
+            background-color: $secondary;
+            color: black;
+        }
+    }
+}
+
+.activepage {
+    background-color: $secondary;
+    color: black;
+}
+
+.language {
+    grid-area: language;
+    justify-self: right;
+    padding-right: 20px;
+
+    img {
+        height: 30px;
+        margin-left: 10px;
+        border: solid 1px rgb(150, 150, 150);
+    }
+}
+
+.flaginactive {
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+#hamburgericon {
+    display: none;
+    width: 50px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $secondary;
+    }
+}

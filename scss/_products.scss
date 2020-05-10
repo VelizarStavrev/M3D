@@ -1,0 +1,244 @@
+/* PRODUCTS */
+.productscontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    column-gap: 2.5%;
+    row-gap: 5vh;
+    padding-bottom: 2.5%;
+}
+
+.productscard {
+    border: solid 2px $primary;
+    border-radius: 5px;
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    h4 {
+        margin: 0;
+        padding: 10px;
+        background-color: $primary;
+        color: white;
+    }
+
+    button {
+        width: 45%;
+        margin: 15px 0;
+        padding: 7.5px;
+        background-color: white;
+        color: $primary;
+        border: none;
+        font-weight: bold;
+        font-size: 0.8rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $secondary;
+            color: white;
+        }
+    }
+}
+
+.buttons {
+    text-align: center;
+    background-color: $primary;
+}
+
+/* image modal */
+.imagewindow {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: none;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: ". . close"
+                         "prevbtn imagearea nextbtn"
+                         ". . .";
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    user-select: none;
+}
+
+.imageclose {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.imagearea {
+    grid-area: imagearea;
+}
+
+/* Slideshow container */
+.image-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.myImages {
+  display: none;
+
+    img {
+        height: 500px;
+        width: 100%;
+    }
+}
+
+/* Caption text */
+.imagetext {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Next & previous buttons */
+.prev {
+    grid-area: prevbtn;
+}
+
+.next {
+    grid-area: nextbtn;
+}
+
+.prev, .next {
+    color: white;
+    color: $secondary;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.prev:hover, .next:hover {
+    color: rgb(150, 150, 150);
+}
+
+/* The dots/bullets/indicators */
+#dots {
+    text-align: center;
+}
+
+.imagedot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 20px 2.5px 0px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.imageactive, .imagedot:hover {
+    background-color: $primary;
+}
+
+/* info modal */
+.infowindow {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: none;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: ". . close"
+                         ". infoarea ."
+                         ". . .";
+    align-items: center;
+    justify-items: center;
+    padding: 2.5%;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.infoclose {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.infoarea {
+    grid-area: infoarea;
+    background-color: white;
+    width: 75%;
+    height: auto;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+    padding: 2.5%;
+}
+
+.infotitle {
+    margin-top: 0;
+}
+
+#infoarea1, #infoarea2, #infoarea3, #infoarea4, #infoarea5, #infoarea6, #infoarea7, 
+#infoarea8, #infoarea9, #infoarea10, #infoarea11, #infoarea12, #infoarea13 {
+    display: none;
+}
+
+/* video modal */
+.videowindow {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    display: none;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 5% 90% 5%;
+    grid-template-areas: ". . close"
+                         ". videoarea ."
+                         ". . .";
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.videoclose {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    width: 100%;
+    height: 100%;
+}
+
+.videoarea {
+    grid-area: videoarea;
+
+    iframe {
+        width: 800px;
+        height: 450px;
+        border: solid 2px $primary;
+    }
+}

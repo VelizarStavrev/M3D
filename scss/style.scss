@@ -1,0 +1,47 @@
+/* M3D - REDESIGN */
+/*  by V.Stavrev  */
+
+/* IMPORTS */
+@import 'variables';
+@import 'fonts';
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: url(/images/background.jpg);
+    font-family: OpenSans-Regular;
+}
+
+@import 'topbtn';
+
+.container {
+    display: grid;
+    grid-template-columns: auto 80% auto;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header"
+                         "carousel carousel carousel"
+                         ".      main   ."
+                         "footer footer footer";
+}
+
+@import 'header';
+
+@import 'carousel';
+
+@import 'main';
+
+@import 'about';
+
+@import 'products';
+
+@import 'services';
+
+@import 'contacts';
+
+@import 'footer';
+
+/* MEDIA QUERIES */
+@import 'queries';

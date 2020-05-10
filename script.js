@@ -2,7 +2,7 @@
 // by V.Stavrev
 
 // SCROLL TO TOP BUTTON
-var topbutton = document.getElementById("topBtn");
+let topbutton = document.getElementById("topBtn");
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -20,7 +20,7 @@ function topFunction() {
 
 // NAVBAR
 function navBar() {
-  var navMenu = document.getElementById("navMenu").style.display;
+  let navMenu = document.getElementById("navMenu").style.display;
   if (navMenu === "block") {
       document.getElementById("navMenu").style.display = "none";
       document.getElementById("hamburgericon").style.backgroundColor = "rgb(50, 50, 50)";
@@ -33,7 +33,7 @@ function navBar() {
 
 // CERTIFICATE MODAL
 // Variables
-var screenWidth = screen.width;
+let screenWidth = screen.width;
 
 // Key pressed in the modal
 function keyEvents(event) {
@@ -77,7 +77,7 @@ function closeModal() {
 }
 
 function zoomIn() {
-  var zoom = document.getElementById("certificateimg").style.cursor;
+  let zoom = document.getElementById("certificateimg").style.cursor;
 
   if (screenWidth <= 650) {
     document.getElementById("certificateimg").style.cursor = "auto";

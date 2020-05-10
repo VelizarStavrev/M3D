@@ -1,0 +1,340 @@
+/* MEDIA QUERIES */
+@media screen and (min-width: 1400px) {
+    body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        width: 1400px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    /* FOOTER */
+    .footercontainer {
+        column-gap: 5%;
+    }
+
+    .certificate img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1220px) {
+    /* FOOTER */
+    .footercontainer {
+        grid-template-columns: auto auto auto 15%;
+        column-gap: 2.5%;
+    }
+
+    .certificate img {
+        width: 110%;
+    }
+
+    .language {
+        justify-self: center;
+        padding-right: 0px;
+    }
+}
+
+@media screen and (max-width: 1115px) {
+    /* NAV MENU */
+    header {
+        grid-template-columns: 10% 30% auto 25% 10%;
+        grid-template-rows: repeat(2, auto);
+        grid-template-areas: ". title title title ."
+                             ". logo nav  language .";
+    }
+
+    #hamburgericon {
+        display: block;
+    }
+
+    nav {
+        justify-self: left;
+
+        ul {
+            margin-top: 15px;
+            flex-direction: column;
+            /* width: 170px; */
+        }
+    
+        li{
+            margin-top: 0px;
+            background-color: rgba(50, 50, 50, 0.9);
+        }
+        
+        a {
+            display: block;
+            padding: 7.5px 20px;
+            background-color: rgba(50, 50, 50, 0);
+            text-align: left;
+        }
+    }
+
+    .logo {
+        justify-self: right;
+        margin-right: 20px;
+    }
+
+    .language {
+        justify-self: left;
+    }
+
+    #navMenu {
+        display: none;
+        position: absolute;
+        z-index: 99;
+    }
+
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 800px;
+    }
+    
+    /* FOOTER */
+    .footercontainer {
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "navfooter certificate"
+                             "contacts certificate"
+                             "partners certificate";
+        column-gap: 5%;
+        row-gap: 2.5vh;
+    }
+
+    .certificate img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    /* NAV MENU */
+    header {
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: ". title ."
+                             ". logo ."
+                             ". language ."
+                             ". nav .";
+    }
+
+    .title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    nav {
+        justify-self: center;
+        padding-bottom: 15px;
+    }
+
+    .logo {
+        justify-self: center;
+        padding-bottom: 20px;
+    }
+
+    .language {
+        justify-self: center;
+        padding-bottom: 20px;
+        padding-right: 20px;
+    }
+
+    #hamburgericon {
+        margin: auto;
+    }
+
+    #navMenu {
+        display: none;
+        position: static;
+        z-index: 99;
+
+        a {
+            text-align: center;
+        }
+    }
+
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 600px;
+    }
+
+    /* PRODUCTS */
+    .videoarea iframe {
+        width: 420px;
+        height: 315px;
+        border: solid 2px rgb(50, 50, 50);
+    }
+
+    .myImages img {
+        height: 400px;
+        width: auto;
+    }
+
+    /* FOOTER */
+    .footercontainer {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: "navfooter"
+                             "contacts"
+                             "partners"
+                             "certificate";
+        margin: 0 22.5%;
+    }
+
+    .certificate img {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 400px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    /* PRODUCTS */
+    /* info modal */
+    .infowindow {
+        width: 95%;
+        height: 95%;
+        grid-template-columns: 5% 90% 5%;
+        grid-template-rows: 5% 90% 5%;
+        padding: 2.5%;
+    }
+
+    .infoarea {
+        width: 90%;
+        height: auto;
+    }
+
+    /* image modal */
+    .myImages img {
+        height: 250px;
+    }
+
+    /* CONTACTS */
+    .container-contacts {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+    }
+
+    #map {
+        width: 100%;
+        height: 250px;
+        border-radius: 5px;
+    }
+
+    /* FOOTER */
+    .close {
+        font-size: 50px;
+    }
+    .certificatemodal img {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    /* FOOTER */
+    .close {
+        font-size: 40px;
+    }
+    .certificatemodal img {
+        height: 70vh;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    /* TOP BUTTON */
+    #topBtn {
+        height: 35px;
+    }
+
+    /* NAV MENU */
+    .title {
+        font-size: 2rem;
+    }
+
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 300px;
+    }
+
+    .text {
+        font-size: 0.8rem;
+    }
+
+    /* PRODUCTS */
+    /* video modal */
+    .videoarea iframe {
+        width: 250px;
+        height: 200px;
+    }
+
+    .myImages img {
+        height: 200px;
+    }
+
+    .prev, .next {
+        font-size: 25px;
+    }
+    
+    /* FOOTER */
+    .footercontainer {
+        text-align: center;
+        margin: 0 10%;
+    }
+
+    .certificatemodal img {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    /* NAV MENU */
+    .title {
+        font-size: 1.75rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    /* NAV MENU */
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .dot {
+        height: 12.5px;
+        width: 12.5px;
+    }
+
+    /* CAROUSEL */
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 270px;
+    }
+
+    /* Caption text */
+    .text {
+        font-size: 0.5rem;
+    }
+
+    /* FOOTER */
+    .close {
+        font-size: 30px;
+    }
+    
+    .certificatemodal img {
+        height: 50vh;
+    }
+}

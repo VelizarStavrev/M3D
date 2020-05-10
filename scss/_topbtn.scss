@@ -1,0 +1,19 @@
+/* BACK TO TOP BUTTON */
+#topBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: $primary;
+    cursor: pointer;
+    border: solid 1px white;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: $secondary;
+    }
+}

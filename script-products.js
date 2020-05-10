@@ -220,12 +220,11 @@ function imageWindow(number) {
     }
 }
   
-var imageIndex = 1;
+let imageIndex = 1;
 showImages(imageIndex);
   
 // Next/previous controls
 function plusImages(n) {
-    console.log(n);
     showImages(imageIndex += n);
 }
   
@@ -235,9 +234,9 @@ function currentImage(n) {
 }
   
 function showImages(n) {
-    var i;
-    var images = document.getElementsByClassName("myImages");
-    var imagedots = document.getElementsByClassName("imagedot");
+    let i;
+    let images = document.getElementsByClassName("myImages");
+    let imagedots = document.getElementsByClassName("imagedot");
     if (n > images.length) {imageIndex = 1}
     if (n < 1) {imageIndex = images.length}
     for (i = 0; i < images.length; i++) {
