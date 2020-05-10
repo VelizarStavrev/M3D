@@ -16,7 +16,8 @@ The SASS folder is left intentionally for viewing purposes.
 **7.** Fixed size for big screens  
 
 ## II. To Do
-**1.** SEO optimisation  
+**1.** SEO optimisation - mainly pictures  
+**2.** Disable overlay background scrolling  
 
 ## III. Live Link
 Click [this](https://velizarstavrev.github.io/M3D/) to view the live version on github.
