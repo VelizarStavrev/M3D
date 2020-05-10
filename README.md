@@ -9,7 +9,7 @@ The SASS folder is left intentionally for viewing purposes.
 ## I. Main Features
 **1.** Carousel  
 **2.** Embedded video  
-**3.** Overlays
+**3.** Overlays  
 **4.** Google Maps  
 **5.** Contact Form  
 **6.** Mobile responsiveness  
